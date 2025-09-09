@@ -66,7 +66,7 @@ export default function Work() {
 
           <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-l from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
             <div className="bg-linear-to-l from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% rounded-xl justify-center flex h-full items-center text-[var(--text-light)]">
-              Product Designer
+              Web3 Developer
             </div>
           </div>
         </div>
