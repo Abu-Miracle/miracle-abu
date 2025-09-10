@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export default function Work() {
   const projects = [
     {
@@ -18,9 +21,8 @@ export default function Work() {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
       <div className="gap-3 grid grid-cols-1 grid-rows-[6fr_6fr] h-full">
-
         <div className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]   border-2 border-[var(--light-gray)] rounded-xl">
           <div className="flex items-center px-6 mb-7">
             <div className="bg-[var(--text-light)] w-2 h-2  rounded-full mr-2"></div>
@@ -45,6 +47,15 @@ export default function Work() {
               </div>
             </div>
           ))}
+          <div className="px-6 flex justify-end">
+            <Link
+              href="/projects"
+              className="text-sm text-[var(--orange)] flex items-center  pb-[1px]"
+            >
+              <span>See More</span>
+              <ArrowRight size={14} className="ml-1" />
+            </Link>
+          </div>
         </div>
 
         <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl"></div>
@@ -65,41 +76,54 @@ export default function Work() {
           </div>
 
           <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-l from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-            <div className="bg-linear-to-l from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% rounded-xl justify-center flex h-full items-center text-[var(--text-light)]">
+            <div className="bg-linear-to-l from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)]  rounded-xl from-45% via-100% justify-center flex h-full items-center text-[var(--text-light)]">
               Web3 Developer
             </div>
           </div>
         </div>
 
-        <div className="rounded-xl bg-[var(--dark-gray)] border-2 border-[var(--light-gray)]">
+        <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
+          <div className="rounded-xl bg-[var(--dark-gray)] w-full h-full bg-linear-to-b from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% flex flex-col">
             <div className="flex items-center mt-10 px-6 mb-5">
-                <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
-                <span className="text-[var(--orange)] text-[16px] ">
+              <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
+              <span className="text-[var(--orange)] text-[16px] ">
                 Technology Stack
-                </span>
+              </span>
             </div>
 
-            <div className="flex justify-between items-center pl-10 pr-20">
-                <div className="">
-                    <h1 className="text-sm text-white mb-3">Frontend</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">HTML/CSS</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">Tailwind CSS</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">React</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">Next.js</h1>
-                </div>
-                <div className="">
-                    <h1 className="text-sm text-white mb-3">Languages</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">Rust</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">Solidity</h1>
-                    <h1 className="text-[var(--text-light)] my-1 font-semibold">JavaScript</h1>
-                </div>
+            <div className="flex justify-between items-center pl-10 pr-20 mb-7 md:mb-0">
+              <div className="">
+                <h1 className="text-sm text-white mb-3">Frontend</h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  HTML/CSS
+                </h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  Tailwind CSS
+                </h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  React
+                </h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  Next.js
+                </h1>
+              </div>
+              <div className="">
+                <h1 className="text-sm text-white mb-3">Languages</h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  Rust
+                </h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  Solidity
+                </h1>
+                <h1 className="text-[var(--text-light)] my-1 font-semibold">
+                  JavaScript
+                </h1>
+              </div>
             </div>
+          </div>
         </div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)]">
-
-        </div>
-        
+        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)]"></div>
       </div>
     </div>
   );
