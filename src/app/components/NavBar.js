@@ -27,14 +27,20 @@ export default function NavBar() {
 
   return (
     <div className="w-full flex md:justify-center justify-between mb-3 bg-[var(--dark-gray)] md:bg-transparent border-2 md:border-none border-[var(--light-gray)] rounded-full pl-1 md:pl-0 pr-5 md:pr-0">
-    <div className="flex items-center justify-center">
-      <div className="md:bg-[var(--dark-gray)] md:border-2 border-[var(--light-gray)] rounded-full flex justify-center items-center w-16 h-16 ">
-        <Image src="/logo.svg" width={40} height={40} alt="Logo" className="mr-2 md:mr-0"/>
-      </div>
-      <span className="flex md:hidden text-2xl text-[var(--orange)] whitespace-nowrap">
+      <div className="flex items-center justify-center">
+        <div className="md:bg-[var(--dark-gray)] md:border-2 border-[var(--light-gray)] rounded-full flex justify-center items-center w-16 h-16 ">
+          <Image
+            src="/logo.svg"
+            width={40}
+            height={40}
+            alt="Logo"
+            className="mr-2 md:mr-0"
+          />
+        </div>
+        <span className="flex md:hidden text-xl text-[var(--orange)] whitespace-nowrap">
           {getCurrentPageName()}
         </span>
-    </div>
+      </div>
 
       <div className="bg-[#1B1B1B] border-[var(--light-gray)] hidden md:flex justify-between items-center border-2 w-full rounded-full px-14">
         {navLinks.map((item, index) => {

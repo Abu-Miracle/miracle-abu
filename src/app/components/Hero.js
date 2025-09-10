@@ -6,12 +6,13 @@ export default function Hero() {
           <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
           AVAILABLE FOR JOB
         </div>
+
         <h1 className="text-[var(--text-light)]">Frontend Developer</h1>
 
         <div className="bg-gray-600 flex border-4 border-[var(--light-gray)] lg:hidden  w-56 h-56 rounded-full mt-10"></div>
 
         <h1 className="text-white text-3xl font-bold mt-10">I'm MIracle Abu</h1>
-        <p className="mt-4 mb-5 text-[15px]">
+        <p className="mt-4 mb-5 text-[14px]">
           I build responsive, user-friendly websites and web applications using
           modern technologies like React and Next.js. I focus on creating
           seamless user experiences and pixel-perfect designs that work
@@ -39,13 +40,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hidden lg:flex flex-col justify-start h-full">
-        <div className="bg-[#161616] text-[12px] px-4 py-1 rounded-full flex items-center">
+      <div className="hidden lg:flex flex-col  justify-center items-center h-full">
+        <div className="bg-[#161616] w-fit text-[12px] px-4 py-1 rounded-full flex items-center">
           <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
           AVAILABLE FOR JOB
         </div>
-                <div className="bg-gray-600 hidden border-4 border-[var(--light-gray)] lg:flex  w-56 h-56 rounded-full mt-10"></div>
-
+        <div className="bg-gray-600 hidden border-4 border-[var(--light-gray)] lg:flex  w-56 h-56 rounded-full mt-10"></div>
       </div>
     </div>
   );

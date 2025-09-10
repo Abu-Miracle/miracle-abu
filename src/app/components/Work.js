@@ -63,35 +63,35 @@ export default function Work() {
 
       <div className="grid grid-cols-1 gap-3 grid-rows-[1.5fr_1.5fr_4.5fr_4.5fr]">
         <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-          <div className="bg-linear-to-r from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% rounded-xl justify-center flex h-full items-center text-[var(--text-light)]">
+          <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-sm md:text-[16px]">
             Frontend Developer
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 text-sm md:text-[16px]">
           <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-            <div className="bg-linear-to-r from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% rounded-xl justify-center flex h-full items-center text-[var(--text-light)]">
+            <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-center">
               Smart Contract Developer
             </div>
           </div>
 
           <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-l from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-            <div className="bg-linear-to-l from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)]  rounded-xl from-45% via-100% justify-center flex h-full items-center text-[var(--text-light)]">
+            <div className="bg-linear-to-l from-[var(--dark-gray)] to-[#33130E] rounded-xl from-45% justify-center flex h-full items-center text-[var(--text-light)]">
               Web3 Developer
             </div>
           </div>
         </div>
 
         <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-          <div className="rounded-xl bg-[var(--dark-gray)] w-full h-full bg-linear-to-b from-[var(--dark-gray)] via-[#33130E] to-[var(--dark-orange)] from-45% via-100% flex flex-col">
+          <div className="rounded-xl bg-[var(--dark-gray)] w-full h-full bg-linear-to-b from-[var(--dark-gray)] to-[#33130E] from-45% flex flex-col">
             <div className="flex items-center mt-10 px-6 mb-5">
-              <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
-              <span className="text-[var(--orange)] text-[16px] ">
+              <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-2"></div>
+              <span className="text-[var(--text-light)] text-[16px] ">
                 Technology Stack
               </span>
             </div>
 
-            <div className="flex justify-between items-center pl-10 pr-20 mb-7 md:mb-0">
+            <div className="flex justify-between  items-center pl-10 pr-20 mb-7 md:mb-0 text-sm md:text-[16px]">
               <div className="">
                 <h1 className="text-sm text-white mb-3">Frontend</h1>
                 <h1 className="text-[var(--text-light)] my-1 font-semibold">
@@ -123,7 +123,7 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)]"></div>
+        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl"></div>
       </div>
     </div>
   );
