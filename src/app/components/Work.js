@@ -33,8 +33,9 @@ export default function Work() {
           </div>
 
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
+              href={`/projects/${project.slug}`}
               className="flex justify-between items-center mb-3 md:mb-5 hover:bg-white/10 cursor-pointer px-6 py-2 rounded-xl"
             >
               <div className="flex flex-col">
@@ -46,7 +47,7 @@ export default function Work() {
               <div className="text-sm text-[var(--text-light)]">
                 {project.year}
               </div>
-            </div>
+            </Link>
           ))}
           <div className="px-6 flex justify-end">
             <Link
@@ -68,7 +69,7 @@ export default function Work() {
           </div>
 
           {experiences.map((item, index) => (
-            <div className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-2 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]">
+            <div key={index} className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-2 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]">
               <div className="w-full h-32 md:w-36 md:h-32 bg-gray-500 rounded-md mb-3 md:mb-0 md:mr-3"></div>
 
               <div className="flex flex-col min-h-32 justify-between flex-1">
