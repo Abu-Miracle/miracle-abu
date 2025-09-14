@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export default function ProjectDetail({ params }) {
-  const project = projects.find(p => p.slug === params.slug);
-  
+  const project = projects.find((p) => p.slug === params.slug);
+
   if (!project) {
     notFound();
   }
@@ -13,7 +13,7 @@ export default function ProjectDetail({ params }) {
   return (
     <div className="min-h-screen bg-[var(--bg)] p-6">
       <div className="max-w-4xl mx-auto">
-        <Link 
+        <Link
           href="/projects"
           className="inline-flex items-center text-[var(--orange)] hover:text-[var(--orange)]/80 mb-8 transition-colors"
         >
@@ -21,67 +21,82 @@ export default function ProjectDetail({ params }) {
           Back to Projects
         </Link>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8">
-          <div className="mb-6">
-            <h1 className="text-3xl font-bold text-white mb-2">{project.title}</h1>
-            <p className="text-[var(--orange)] text-lg">{project.role}</p>
-            <p className="text-[var(--text-light)] text-sm">{project.year}</p>
-          </div>
-
-          {project.image && (
-            <div className="mb-8">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          )}
-
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-xl font-semibold text-white mb-4">Project Overview</h2>
-            <p className="text-[var(--text-light)] mb-6">
-              {project.description || "Detailed description of the project..."}
-            </p>
-
-            {project.technologies && (
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Technologies Used</h3>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <span 
-                      key={index}
-                      className="bg-[var(--light-gray)] text-white px-3 py-1 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+        <div className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[1px] rounded-[13px]">
+          <div className="bg-gradient-to-b from-[var(--dark-gray)] from-65% to-[#33130E] rounded-xl">
+            {project.image && (
+              <div className="">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-t-xl"
+                />
               </div>
             )}
 
-            {project.liveUrl && (
-              <div className="flex gap-4 mt-8">
-                <a 
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-6 py-2 rounded-lg transition-colors"
-                >
-                  View Live Project
-                </a>
-                {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-[var(--light-gray)] text-white px-6 py-2 rounded-lg hover:bg-[var(--light-gray)] transition-colors"
-                  >
-                    View Code
-                  </a>
+            <div className="p-8">
+              <div className="mb-6">
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  {project.title}
+                </h1>
+                <p className="text-[var(--dark-orange)] text-lg">
+                  {project.role}
+                </p>
+                <p className="text-[var(--text-light)] text-sm">
+                  {project.year}
+                </p>
+              </div>
+
+              <div className="prose prose-invert max-w-none">
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  Project Overview
+                </h2>
+                <p className="text-[var(--text-light)] mb-6">
+                  {project.description ||
+                    "Detailed description of the project..."}
+                </p>
+
+                {project.technologies && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">
+                      Technologies Used
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="bg-[var(--light-gray)] text-white px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {project.liveUrl && (
+                  <div className="flex gap-4 mt-8">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 md:px-6 py-2 rounded-lg transition-colors"
+                    >
+                      View Live Project
+                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[var(--dark-gray)] text-white px-4 md:px-6 py-2 rounded-lg hover:bg-[var(--light-gray)] transition-colors"
+                      >
+                        View Code
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +104,6 @@ export default function ProjectDetail({ params }) {
   );
 }
 
-// Generate static params for all projects
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,

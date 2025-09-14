@@ -24,7 +24,7 @@ export default function Work() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
       <div className="gap-3 grid grid-cols-1 h-full">
-        <div className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]   border-2 border-[var(--light-gray)] rounded-xl">
+        <div className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]  border-2 border-[var(--light-gray)] rounded-xl">
           <div className="flex items-center px-6 mb-7">
             <div className="bg-[var(--text-light)] w-2 h-2  rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-[16px] ">
@@ -32,7 +32,7 @@ export default function Work() {
             </span>
           </div>
 
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <Link
               key={index}
               href={`/projects/${project.slug}`}
@@ -52,7 +52,7 @@ export default function Work() {
           <div className="px-6 flex justify-end">
             <Link
               href="/projects"
-              className="text-sm text-[var(--orange)] flex items-center  pb-[1px]"
+              className="text-sm text-[var(--orange)] flex items-center hover:text-[var(--dark-orange)]"
             >
               <span>See More</span>
               <ArrowRight size={14} className="ml-1" />
@@ -61,15 +61,18 @@ export default function Work() {
         </div>
 
         <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl pt-10 px-3 md:px-6">
-          <div className="flex items-center mb-7">
-            <div className="bg-[var(--text-light)] w-2 h-2  rounded-full mr-3"></div>
+          <div className="flex items-center mb-7 px-2">
+            <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-[16px] ">
               Work Experience
             </span>
           </div>
 
           {experiences.map((item, index) => (
-            <div key={index} className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-2 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]">
+            <div
+              key={index}
+              className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-3 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]"
+            >
               <div className="w-full h-32 md:w-36 md:h-32 bg-gray-500 rounded-md mb-3 md:mb-0 md:mr-3"></div>
 
               <div className="flex flex-col min-h-32 justify-between flex-1">

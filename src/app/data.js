@@ -6,7 +6,7 @@ export const projects = [
     slug: "blockfund",
     image: "/blockfund_thumbnail.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
+      "This donation dApp enables transparent and secure donations using smart contracts. The application demonstrates blockchain-based crowdfunding capabilities where users can make donations that are recorded immutably on the blockchain",
     technologies: ["Nextjs", "Solidity", "Metamask", "Wagmi", "RainbowKit"],
     liveUrl: "https://blockfund-git-main-abu-miracles-projects.vercel.app/",
     githubUrl: "https://github.com/Abu-Miracle/Donation-dApp",
@@ -18,7 +18,7 @@ export const projects = [
     slug: "block-degrees",
     image: "/blockdegrees_thumbnail.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
+      "BlockDegrees is a web application that leverages blockchain technology to provide verifiable academic credentials. This platform allows users to easily verify their degrees and share them with potential employers, streamlining the hiring process",
     technologies: ["React", "Solidity", "Metamask"],
     liveUrl: "https://block-degrees.vercel.app/",
     githubUrl: "https://github.com/Abu-Miracle/BlockDegrees",
@@ -30,10 +30,22 @@ export const projects = [
     slug: "lilies-food",
     image: "/lilies_thumbnail.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
+      "A modern food ordering platform frontend demo that allows users to browse and discover delicious meals, manage their personal profiles and delivery information, place orders with easy quantity controls, and track their order history and spending. This responsive web application demonstrates clean design principles and user-friendly interfaces for food delivery services",
     technologies: ["React"],
     liveUrl: "https://food-app-five-pi.vercel.app/",
     githubUrl: "https://github.com/Abu-Miracle/food-app",
+  },
+  {
+    title: "NetPoint",
+    role: "Frontend Developer",
+    year: "2024",
+    slug: "netpoint",
+    image: "/netpoint_thumbnail.png",
+    description:
+      "A modern, responsive business website for NetFlow, showcasing network monitoring and optimization services with clean design and mobile-first approach",
+    technologies: ["HTML", "Tailwind CSS"],
+    liveUrl: "https://landing-page-tailwind-eta.vercel.app/",
+    githubUrl: "https://github.com/Abu-Miracle/landing-page-tailwind",
   },
 ];
 
