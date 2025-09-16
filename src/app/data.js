@@ -47,6 +47,18 @@ export const projects = [
     liveUrl: "https://landing-page-tailwind-eta.vercel.app/",
     githubUrl: "https://github.com/Abu-Miracle/landing-page-tailwind",
   },
+  {
+    title: "Vuna Pay",
+    role: "Frontend Developer",
+    year: "2024",
+    slug: "vuna-pay",
+    image: "/vunapay_thumbnail.svg",
+    description:
+      "A mobile-first payment application designed for Veritas University students to seamlessly manage and pay their academic dues without stress. The app provides a centralized platform for handling various university payments including faculty dues, departmental dues, SRA dues, and NACOS dues",
+    technologies: ["React Native", "Expo Go"],
+    liveUrl: "https://vuna-pay.vercel.app/",
+    githubUrl: "https://github.com/Abu-Miracle/vuna-pay",
+  },
 ];
 
 export const experiences = [
@@ -57,13 +69,17 @@ export const experiences = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
     type: "Internship",
     duration: "July - September 2023",
+    image: "/khemsafe.jpg",
+    slug: "khemsafe-computers",
   },
   {
     name: "Colab Innovation Campus",
     location: "Kaduna, Nigeria",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
+      "Intensive 3-month blockchain development program focusing on smart contract development, Web3 frontend integration, and enterprise-level blockchain solutions. Gained comprehensive understanding of the Ethereum ecosystem and modern dApp development practices.",
     type: "Internship",
     duration: "July - October 2024",
+    image: "/colab.png",
+    slug: "colab-innovation-campus"
   },
 ];

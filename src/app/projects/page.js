@@ -25,13 +25,13 @@ export default function Projects() {
           <Link
             key={index}
             href={`/projects/${item.slug}`}
-            className="w-full flex md:flex-col flex-row mb-5 md:mb-7 bg-[#1a1a1a] hover:bg-[var(--light-gray)] rounded-xl cursor-pointer transition-colors duration-500"
+            className="w-full flex md:flex-col flex-row bg-[#1a1a1a] hover:bg-[var(--light-gray)] rounded-xl cursor-pointer transition-colors duration-500"
           >
             <div className="md:w-full w-[40%] h-48  md:mb-3 mb-0 md:mr-3">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover md:rounded-t-xl md:rounded-bl-none rounded-l-xl"
+                className="w-full h-full object-cover object-top md:rounded-t-xl md:rounded-bl-none rounded-l-xl"
               />
             </div>
 
