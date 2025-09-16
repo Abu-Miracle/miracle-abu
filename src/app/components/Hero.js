@@ -42,7 +42,7 @@ export default function Hero() {
 
       <div className="hidden lg:flex flex-col  justify-center items-center h-full">
         <div className="bg-[#161616] w-fit text-[12px] px-4 py-1 rounded-full flex items-center">
-          <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2"></div>
+          <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2 animate-pulse"></div>
           AVAILABLE FOR JOB
         </div>
         <div className="bg-gray-600 hidden border-4 border-[var(--light-gray)] lg:flex  w-56 h-56 rounded-full mt-10"></div>
