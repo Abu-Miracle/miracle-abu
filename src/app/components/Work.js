@@ -75,7 +75,11 @@ export default function Work() {
               className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-3 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]"
             >
               <div className="w-full h-32 md:w-36 md:h-32 mb-3 md:mb-0 md:mr-3">
-                <img src={item.image} alt="" className="w-full h-full object-cover rounded-md" />
+                <img
+                  src={item.image}
+                  alt=""
+                  className="w-full h-full object-cover rounded-md"
+                />
               </div>
 
               <div className="flex flex-col min-h-32 justify-between flex-1">

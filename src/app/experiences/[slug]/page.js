@@ -1,7 +1,7 @@
 import { experiences } from "@/app/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from "lucide-react";
 import ColabInternshipDetails from "@/app/components/ColabInternshipDetails";
 import KhemsafeInternshipDetails from "@/app/components/KhemsafeInternshipDetails";
 
@@ -12,11 +12,11 @@ export default function ExperienceDetail({ params }) {
     notFound();
   }
 
-  if (experience.slug === 'colab-innovation-campus') {
+  if (experience.slug === "colab-innovation-campus") {
     return <ColabInternshipDetails experience={experience} />;
   }
-  if (experience.slug === 'khemsafe-computers') {
-    return <KhemsafeInternshipDetails experience={experience} />
+  if (experience.slug === "khemsafe-computers") {
+    return <KhemsafeInternshipDetails experience={experience} />;
   }
 }
 

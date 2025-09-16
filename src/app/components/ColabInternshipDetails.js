@@ -3,31 +3,31 @@ import { ArrowLeft } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
-export default function ColabInternshipDetails ({ experience }) {
-    const technicalLearning = [
+export default function ColabInternshipDetails({ experience }) {
+  const technicalLearning = [
     {
       title: "Blockchain Fundamentals",
       items: [
         "Blockchain architecture, consensus mechanisms (PoS), cryptographic hashing",
         "Ethereum ecosystem, transactions, gas mechanics",
-        "Blockchain trilemma and Layer 2 solutions"
-      ]
+        "Blockchain trilemma and Layer 2 solutions",
+      ],
     },
     {
       title: "Solidity Programming",
       items: [
         "Data types, contract components, visibility modifiers",
         "State variables, functions, events, modifiers",
-        "Inheritance, interfaces, global variables"
-      ]
+        "Inheritance, interfaces, global variables",
+      ],
     },
     {
       title: "Token Standards Implementation",
       items: [
         "ERC-20 (Fungible tokens) - functions and events",
         "ERC-721 (NFTs) - ownership and transfer mechanics",
-        "ERC-1155 (Hybrid tokens) - multi-token standard"
-      ]
+        "ERC-1155 (Hybrid tokens) - multi-token standard",
+      ],
     },
     {
       title: "Testing & Security",
@@ -36,24 +36,33 @@ export default function ColabInternshipDetails ({ experience }) {
         "Foundry testing with Solidity",
         "Test suites, test cases, and unit tests",
         "Reentrancy guards, proper visibility modifiers",
-        "Common vulnerabilities and mitigation strategies"
-      ]
+        "Common vulnerabilities and mitigation strategies",
+      ],
     },
     {
       title: "Frontend Development",
       items: [
         "Web3 Integration Stack: Next.js, Tailwind CSS, Wagmi, RainbowKit",
         "Connecting frontend to smart contracts",
-        "Calculator dApp example implementation"
-      ]
-    }
+        "Calculator dApp example implementation",
+      ],
+    },
+    {
+      title: "Professional & Industry Skills",
+      items: [
+        "Professional conduct and workplace etiquette",
+        "Teamwork and collaborative problem-solving",
+        "Technical project management and deadlines",
+        "Quality assurance and testing practices",
+      ],
+    },
   ];
 
   const keyOutcomes = [
     "Duration: 3 months (July-September 2024)",
     "Technical depth gained in blockchain development",
     "Practical experience with full dApp development cycle",
-    "Understanding of enterprise-level Web3 concepts"
+    "Understanding of enterprise-level Web3 concepts",
   ];
 
   return (
@@ -85,35 +94,38 @@ export default function ColabInternshipDetails ({ experience }) {
           </div>
 
           <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-6">
-              <p className="text-[var(--text-light)] leading-relaxed">
-                {experience.description}
-              </p>
-            </div>
+            <p className="text-[var(--text-light)] leading-relaxed">
+              {experience.description}
+            </p>
+          </div>
         </div>
 
         <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
           <div className="flex items-center mb-8">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-xl font-semibold">
-              Core Technical Learning
+              Skills and Technical Learning
             </span>
           </div>
 
           <div className="grid gap-6">
             {technicalLearning.map((section, index) => (
-                <div className="bg-[var(--light-gray)] from-60% rounded-xl p-6">
-                  <h3 className="text-white text-lg font-semibold mb-4">
-                    {section.title}
-                  </h3>
-                  <ul className="space-y-2">
-                    {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-[var(--text-light)] text-sm flex items-start">
-                        <div className="w-1.5 h-1.5 bg-[var(--orange)] rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="bg-[var(--light-gray)] from-60% rounded-xl p-6">
+                <h3 className="text-white text-lg font-semibold mb-4">
+                  {section.title}
+                </h3>
+                <ul className="space-y-2">
+                  {section.items.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      className="text-[var(--text-light)] text-sm flex items-start"
+                    >
+                      <div className="w-1.5 h-1.5 bg-[var(--orange)] rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
@@ -129,13 +141,16 @@ export default function ColabInternshipDetails ({ experience }) {
 
             <div className="mb-6">
               <p className="text-[var(--text-light)] mb-4">
-                Developed a comprehensive smart contract system featuring advanced Solidity concepts 
-                including structs, mappings, and sophisticated access control mechanisms.
+                Developed a comprehensive smart contract system featuring
+                advanced Solidity concepts including structs, mappings, and
+                sophisticated access control mechanisms.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-[var(--light-gray)] rounded-lg p-4">
-                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
+                  <h4 className="text-white font-semibold mb-2">
+                    Key Features
+                  </h4>
                   <ul className="text-[var(--text-light)] text-sm space-y-1">
                     <li>• Complex struct implementations</li>
                     <li>• Advanced mapping patterns</li>
@@ -145,7 +160,9 @@ export default function ColabInternshipDetails ({ experience }) {
                   </ul>
                 </div>
                 <div className="bg-[var(--light-gray)] rounded-lg p-4">
-                  <h4 className="text-white font-semibold mb-2">Technologies</h4>
+                  <h4 className="text-white font-semibold mb-2">
+                    Technologies
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-[var(--dark-gray)] text-[var(--orange)] px-2 py-1 rounded text-xs">
                       Solidity
@@ -163,7 +180,10 @@ export default function ColabInternshipDetails ({ experience }) {
                 </div>
               </div>
 
-              <Link href="https://github.com/Abu-Miracle/cohort-5-2024/tree/main" className="bg-[var(--dark-orange)] hover:bg-[var(--dark-orange)] w-fit text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center cursor-pointer">
+              <Link
+                href="https://github.com/Abu-Miracle/cohort-5-2024/tree/main"
+                className="bg-[var(--dark-orange)] hover:bg-[var(--dark-orange)] w-fit text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center cursor-pointer"
+              >
                 <FaGithub size={18} className="mr-2" />
                 View Repository
                 <ExternalLink size={16} className="ml-2" />
@@ -180,27 +200,27 @@ export default function ColabInternshipDetails ({ experience }) {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-2 pb-4">
             {keyOutcomes.map((outcome, index) => (
               <div key={index}>
-                  <div className="flex items-start">
-                    <div className="w-[6px] h-[6px] bg-[var(--orange)] rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <p className="text-[var(--text-light)] text-sm">
-                      {outcome}
-                    </p>
-                  </div>
+                <div className="flex items-start">
+                  <div className="w-[6px] h-[6px] bg-[var(--orange)] rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <p className="text-[var(--text-light)] text-sm">{outcome}</p>
+                </div>
               </div>
             ))}
           </div>
 
-            <div className="bg-[var(--light-gray)] rounded-xl p-6 text-center mt-5">
-              <div className="bg-green-500 w-3 h-3 rounded-full mb-4 animate-pulse mx-auto"></div>
-              <h3 className="text-white font-semibold mb-2">Program Completed Successfully</h3>
-              <p className="text-[var(--text-light)] text-sm">
-                Gained comprehensive blockchain development skills and practical Web3 experience
-              </p>
-            </div>
-          
+          <div className="bg-[var(--light-gray)] rounded-xl p-6 text-center mt-5">
+            <div className="bg-green-500 w-3 h-3 rounded-full mb-4 animate-pulse mx-auto"></div>
+            <h3 className="text-white font-semibold mb-2">
+              Program Completed Successfully
+            </h3>
+            <p className="text-[var(--text-light)] text-sm">
+              Gained comprehensive blockchain development skills and practical
+              Web3 experience
+            </p>
+          </div>
         </div>
       </div>
     </div>

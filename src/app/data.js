@@ -63,10 +63,10 @@ export const projects = [
 
 export const experiences = [
   {
-    name: "Khemsafe Computers and Communications L",
+    name: "Khemsafe Computers and Communications Ltd",
     location: "Kaduna, Nigeria",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!",
+      "Comprehensive industrial training program focused on web development fundamentals and graphic design. Gained practical experience in HTML/CSS development, responsive design principles, and professional graphic design using industry-standard tools. The program bridged theoretical knowledge with real-world application in a professional IT environment",
     type: "Internship",
     duration: "July - September 2023",
     image: "/khemsafe.jpg",
@@ -80,6 +80,6 @@ export const experiences = [
     type: "Internship",
     duration: "July - October 2024",
     image: "/colab.png",
-    slug: "colab-innovation-campus"
+    slug: "colab-innovation-campus",
   },
 ];
