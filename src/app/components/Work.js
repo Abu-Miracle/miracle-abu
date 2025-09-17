@@ -187,7 +187,7 @@ export default function Work() {
           <p className="text-[var(--text-light)] text-sm mb-4">
             Open to new opportunities and exciting projects
           </p>
-          <button className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+          <button className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer">
             Let's Connect
           </button>
         </div>

@@ -1,4 +1,29 @@
+"use client";
+
+import { useState } from "react";
+import { Copy, Check } from "lucide-react";
+
 export default function Hero() {
+  const [isCopied, setIsCopied] = useState(false);
+
+  async function CopyEmail () {
+    try {
+      navigator.clipboard.writeText("miracleabu07@gmail.com");
+      return true;
+    } catch(err) {
+      console.error("Failed to Copy email : ", err)
+      return false;
+    }
+  }
+
+  const handleCopy = async() => {
+    const success = await CopyEmail();
+    if (success) {
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000); 
+    }
+  }
+  
   return (
     <div className="w-full bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] flex justify-between  items-center rounded-xl mb-3 px-7 lg:px-10 py-12 lg:py-16">
       <div className="lg:w-[40%] w-full">
@@ -27,14 +52,23 @@ export default function Hero() {
             <span className="border-l-2 border-[var(--dark-gray)] h-full w-8 flex items-center justify-center">
               <img src="/plus.svg" alt="plus" className="w-6 h-6" />
             </span>
-          </button>
+          </button> 
 
-          <button className="bg-[#161616] border-2 border-[var(--light-gray)] w-32 h-10 rounded flex items-center hover:bg-[var(--background)] cursor-pointer transition-colors duration-500">
+          <button onClick={() => {handleCopy()}} className="bg-[#161616] border-2 border-[var(--light-gray)] w-32 h-10 rounded flex items-center hover:bg-[var(--background)] cursor-pointer transition-colors duration-500">
             <span className="py-1 text-sm flex-1 flex justify-center">
-              Copy Email
+              {isCopied ? 
+              "Copied!"
+              :
+              "Copy Email"
+              }
             </span>
             <span className="border-l-2 border-[var(--light-gray)] h-full w-8 flex items-center justify-center">
-              <img src="/ph_copy.svg" alt="copy" className="w-6 h-6" />
+              {isCopied? 
+              <Check src="/ph_copy.svg" color={"#ffffff"} alt="copy" className="w-5 h-" />
+              :
+              <Copy src="/ph_copy.svg" color={"#c0c0c0"} alt="copy" className="w-5 h-5" /> 
+              }
+              
             </span>
           </button>
         </div>
