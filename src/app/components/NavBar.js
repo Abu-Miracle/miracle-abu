@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +27,12 @@ export default function NavBar() {
   };
 
   return (
-    <div className="w-full flex md:justify-center justify-between mb-3 bg-[var(--dark-gray)] md:bg-transparent border-2 md:border-none border-[var(--light-gray)] rounded-full pl-1 md:pl-0 pr-5 md:pr-0">
+    <motion.div
+      className="w-full flex md:justify-center justify-between mb-3 bg-[var(--dark-gray)] md:bg-transparent border-2 md:border-none border-[var(--light-gray)] rounded-full pl-1 md:pl-0 pr-5 md:pr-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div className="flex items-center justify-center">
         <div className="md:bg-[var(--dark-gray)] md:border-2 border-[var(--light-gray)] rounded-full flex justify-center items-center w-16 h-16 ">
           <Image
@@ -119,6 +125,6 @@ export default function NavBar() {
           </div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 }

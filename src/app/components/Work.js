@@ -1,9 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaLocationDot } from "react-icons/fa6";
 import { projects, experiences } from "../data";
+import { motion } from "motion/react";
+import { useRef } from "react";
+import { useInView } from "motion/react";
 
 export default function Work() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const lorem =
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!";
 
@@ -23,7 +31,12 @@ export default function Work() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-      <div className="gap-3 grid grid-cols-1 h-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="gap-3 grid grid-cols-1 h-full"
+      >
         <div className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]  border-2 border-[var(--light-gray)] rounded-xl">
           <div className="flex items-center px-6 mb-7">
             <div className="bg-[var(--text-light)] w-2 h-2  rounded-full mr-3"></div>
@@ -60,7 +73,12 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl pt-10 px-3 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl pt-10 px-3 md:px-6"
+        >
           <div className="flex items-center mb-7 px-2">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-[16px] ">
@@ -116,8 +134,8 @@ export default function Work() {
               </div>
             </Link>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div className="grid grid-cols-1 gap-3 grid-rows-[1.5fr_1.5fr_4.5fr_4.5fr]">
         <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">

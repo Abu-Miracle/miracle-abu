@@ -110,7 +110,10 @@ export default function ColabInternshipDetails({ experience }) {
 
           <div className="grid gap-6">
             {technicalLearning.map((section, index) => (
-              <div key={index} className="bg-[var(--light-gray)] from-60% rounded-xl p-6">
+              <div
+                key={index}
+                className="bg-[var(--light-gray)] from-60% rounded-xl p-6"
+              >
                 <h3 className="text-white text-lg font-semibold mb-4">
                   {section.title}
                 </h3>
