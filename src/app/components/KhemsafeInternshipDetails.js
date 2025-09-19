@@ -16,8 +16,14 @@ export default function KhemsafeInternshipDetails({ experience }) {
   const outcomesRef = useRef(null);
 
   const skillsInView = useInView(skillsRef, { once: true, margin: "-100px" });
-  const trainingInView = useInView(trainingRef, { once: true, margin: "-100px" });
-  const outcomesInView = useInView(outcomesRef, { once: true, margin: "-100px" });
+  const trainingInView = useInView(trainingRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const outcomesInView = useInView(outcomesRef, {
+    once: true,
+    margin: "-100px",
+  });
 
   const learningAreas = {
     webDevelopment: {
@@ -154,7 +160,9 @@ export default function KhemsafeInternshipDetails({ experience }) {
         <motion.div
           ref={trainingRef}
           initial={{ opacity: 0, y: 30 }}
-          animate={trainingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            trainingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[1px] rounded-[14px] mb-6"
         >
@@ -228,7 +236,9 @@ export default function KhemsafeInternshipDetails({ experience }) {
         <motion.div
           ref={outcomesRef}
           initial={{ opacity: 0, y: 30 }}
-          animate={outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8"
         >

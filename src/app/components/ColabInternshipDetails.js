@@ -9,16 +9,22 @@ import { useRef } from "react";
 import { useInView } from "motion/react";
 
 export default function ColabInternshipDetails({ experience }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-  
-    const skillsRef = useRef(null);
-    const projectsRef = useRef(null);
-    const outcomesRef = useRef(null);
-  
-    const skillsInView = useInView(skillsRef, { once: true, margin: "-100px" });
-    const projectsInView = useInView(projectsRef, { once: true, margin: "-100px" });
-    const outcomesInView = useInView(outcomesRef, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const outcomesRef = useRef(null);
+
+  const skillsInView = useInView(skillsRef, { once: true, margin: "-100px" });
+  const projectsInView = useInView(projectsRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const outcomesInView = useInView(outcomesRef, {
+    once: true,
+    margin: "-100px",
+  });
 
   const technicalLearning = [
     {
@@ -99,10 +105,11 @@ export default function ColabInternshipDetails({ experience }) {
         </motion.div>
 
         <motion.div
-         initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }} 
-        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
+          transition={{ duration: 1 }}
+          className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6"
+        >
           <div className="mb-6">
             <h1 className="text-3xl font-bold text-white mb-2">
               {experience.name}
@@ -126,12 +133,13 @@ export default function ColabInternshipDetails({ experience }) {
           </div>
         </motion.div>
 
-        <motion.div 
-        ref={skillsRef}
+        <motion.div
+          ref={skillsRef}
           initial={{ opacity: 0, y: 30 }}
           animate={skillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
+          className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6"
+        >
           <div className="flex items-center mb-8">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-xl font-semibold">
@@ -164,12 +172,15 @@ export default function ColabInternshipDetails({ experience }) {
           </div>
         </motion.div>
 
-        <motion.div 
-        ref={projectsRef}
+        <motion.div
+          ref={projectsRef}
           initial={{ opacity: 0, y: 30 }}
-          animate={projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[2px] rounded-[14px] mb-6">
+          className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[2px] rounded-[14px] mb-6"
+        >
           <div className="bg-gradient-to-b from-[var(--dark-gray)] from-45% to-[#33130E] rounded-xl p-8">
             <div className="flex items-center mb-6">
               <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-3"></div>
@@ -231,12 +242,15 @@ export default function ColabInternshipDetails({ experience }) {
           </div>
         </motion.div>
 
-        <motion.div 
-        ref={outcomesRef}
+        <motion.div
+          ref={outcomesRef}
           initial={{ opacity: 0, y: 30 }}
-          animate={outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8">
+          className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8"
+        >
           <div className="flex items-center mb-6">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-xl font-semibold">
