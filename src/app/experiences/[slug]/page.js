@@ -1,7 +1,5 @@
 import { experiences } from "@/app/data";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import ColabInternshipDetails from "@/app/components/ColabInternshipDetails";
 import KhemsafeInternshipDetails from "@/app/components/KhemsafeInternshipDetails";
 

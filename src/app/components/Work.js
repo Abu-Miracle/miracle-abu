@@ -12,8 +12,26 @@ export default function Work() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const lorem =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nulla exercitationem dolorum assumenda debitis asperiores corporis vero reiciendis minima similique qui magnam vel possimus eligendi ea unde molestias ipsam sit, hic error facere enim praesentium? Distinctio nesciunt neque sunt culpa!";
+  const projectsRef = useRef(null);
+  const experiencesRef = useRef(null);
+  const stackRef = useRef(null);
+  const availableRef = useRef(null);
+  const skillsRef = useRef(null);
+
+  const projectsInView = useInView(projectsRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const experiencesInView = useInView(experiencesRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const stackInView = useInView(stackRef, { once: true, margin: "-100px" });
+  const availableInView = useInView(availableRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const skillsInView = useInView(skillsRef, { once: true, margin: "-100px" });
 
   function truncateName(text, maxLength = 37) {
     if (!text) return "";
@@ -31,14 +49,16 @@ export default function Work() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-      <div
-        className="gap-3 grid grid-cols-1 h-full"
-      >
-        <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-        className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]  border-2 border-[var(--light-gray)] rounded-xl">
+      <div className="gap-3 grid grid-cols-1 h-full">
+        <motion.div
+          ref={projectsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={
+            projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="px-2 pt-12 pb-7 bg-[var(--dark-gray)]  border-2 border-[var(--light-gray)] rounded-xl"
+        >
           <div className="flex items-center px-6 mb-7">
             <div className="bg-[var(--text-light)] w-2 h-2  rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-[16px] ">
@@ -75,20 +95,12 @@ export default function Work() {
         </motion.div>
 
         <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.5,
-              duration: 0.3,
-              ease: "easeInOut",
-            },
-          },
-        }}
+          ref={experiencesRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={
+            experiencesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl pt-10 px-3 md:px-6"
         >
           <div className="flex items-center mb-7 px-2">
@@ -149,51 +161,42 @@ export default function Work() {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 grid-rows-[1.5fr_1.5fr_4.5fr_4.5fr]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-        className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-          <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-sm md:text-[16px]">
-            Frontend Developer
+      <div className="grid grid-cols-1 gap-3 grid-rows-[3fr_4.5fr_4.5fr]">
+        <motion.div
+          ref={skillsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={skillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col gap-3 h-full"
+        >
+          <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)] flex-1">
+            <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-sm md:text-[16px]">
+              Frontend Developer
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 text-sm md:text-[16px] flex-1">
+            <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)] h-full">
+              <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-center">
+                Smart Contract Developer
+              </div>
+            </div>
+
+            <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-l from-[var(--light-gray)] from-85% to-[var(--dark-orange)] h-full">
+              <div className="bg-linear-to-l from-[var(--dark-gray)] to-[#33130E] rounded-xl from-45% justify-center flex h-full items-center text-[var(--text-light)]">
+                Web3 Developer
+              </div>
+            </div>
           </div>
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-         className="grid grid-cols-2 gap-3 text-sm md:text-[16px]">
-          <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-r from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-            <div className="bg-linear-to-r from-[var(--dark-gray)] to-[#33130E] from-45% rounded-xl justify-center flex h-full items-center text-[var(--text-light)] text-center">
-              Smart Contract Developer
-            </div>
-          </div>
-
-          <div className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-l from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
-            <div className="bg-linear-to-l from-[var(--dark-gray)] to-[#33130E] rounded-xl from-45% justify-center flex h-full items-center text-[var(--text-light)]">
-              Web3 Developer
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.5,
-              duration: 0.5,
-              ease: "easeInOut",
-            },
-          },
-        }}
-        className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-85% to-[var(--dark-orange)]">
+          ref={stackRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={stackInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="bg-[var(--dark-orange)] rounded-[14px] items-center w-full p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-85% to-[var(--dark-orange)]"
+        >
           <div className="rounded-xl bg-[var(--dark-gray)] w-full h-full bg-linear-to-b from-[var(--dark-gray)] to-[#33130E] from-45% flex flex-col">
             <div className="flex items-center mt-10 px-6 mb-5">
               <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
@@ -234,22 +237,15 @@ export default function Work() {
           </div>
         </motion.div>
 
-        <motion.div 
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.5,
-              duration: 3,
-              ease: "easeInOut",
-            },
-          },
-        }}
-        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-6 flex flex-col justify-center items-center text-center">
+        <motion.div
+          ref={availableRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={
+            availableInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-6 flex flex-col justify-center items-center text-center"
+        >
           <div className="bg-green-500 w-3 h-3 rounded-full mb-4 animate-pulse"></div>
           <h3 className="text-white font-semibold mb-2">Available for Work</h3>
           <p className="text-[var(--text-light)] text-sm mb-4">

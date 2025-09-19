@@ -1,9 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import { motion } from "motion/react";
+import { useRef } from "react";
+import { useInView } from "motion/react";
 
 export default function ColabInternshipDetails({ experience }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    const skillsRef = useRef(null);
+    const projectsRef = useRef(null);
+    const outcomesRef = useRef(null);
+  
+    const skillsInView = useInView(skillsRef, { once: true, margin: "-100px" });
+    const projectsInView = useInView(projectsRef, { once: true, margin: "-100px" });
+    const outcomesInView = useInView(outcomesRef, { once: true, margin: "-100px" });
+
   const technicalLearning = [
     {
       title: "Blockchain Fundamentals",
@@ -68,15 +84,25 @@ export default function ColabInternshipDetails({ experience }) {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] p-6">
       <div className="max-w-4xl mx-auto">
-        <Link
-          href="/"
-          className="inline-flex items-center text-[var(--orange)] hover:text-[var(--dark-orange)] mb-8 transition-colors"
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
-          <ArrowLeft size={16} className="mr-2" />
-          Back to Portfolio
-        </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center text-[var(--orange)] hover:text-[var(--orange)]/80 mb-6 mt-2 transition-colors"
+          >
+            <ArrowLeft size={16} className="mr-2" />
+            Back to Projects
+          </Link>
+        </motion.div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }} 
+        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
           <div className="mb-6">
             <h1 className="text-3xl font-bold text-white mb-2">
               {experience.name}
@@ -98,9 +124,14 @@ export default function ColabInternshipDetails({ experience }) {
               {experience.description}
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
+        <motion.div 
+        ref={skillsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={skillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8 mb-6">
           <div className="flex items-center mb-8">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-xl font-semibold">
@@ -131,9 +162,14 @@ export default function ColabInternshipDetails({ experience }) {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[2px] rounded-[14px] mb-6">
+        <motion.div 
+        ref={projectsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="bg-gradient-to-b from-[var(--light-gray)] from-90% to-[var(--dark-orange)] p-[2px] rounded-[14px] mb-6">
           <div className="bg-gradient-to-b from-[var(--dark-gray)] from-45% to-[#33130E] rounded-xl p-8">
             <div className="flex items-center mb-6">
               <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-3"></div>
@@ -193,9 +229,14 @@ export default function ColabInternshipDetails({ experience }) {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8">
+        <motion.div 
+        ref={outcomesRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="bg-[var(--dark-gray)] border-2 border-[var(--light-gray)] rounded-xl p-8">
           <div className="flex items-center mb-6">
             <div className="bg-[var(--text-light)] w-2 h-2 rounded-full mr-3"></div>
             <span className="text-[var(--text-light)] text-xl font-semibold">
@@ -224,7 +265,7 @@ export default function ColabInternshipDetails({ experience }) {
               Web3 experience
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
