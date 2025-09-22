@@ -8,7 +8,7 @@ export const projects = [
     description:
       "This donation dApp enables transparent and secure donations using smart contracts. The application demonstrates blockchain-based crowdfunding capabilities where users can make donations that are recorded immutably on the blockchain",
     technologies: ["Nextjs", "Solidity", "Metamask", "Wagmi", "RainbowKit"],
-    liveUrl: "https://blockfund-git-main-abu-miracles-projects.vercel.app/",
+    liveUrl: "https://blockfund-dapp.vercel.app/",
     githubUrl: "https://github.com/Abu-Miracle/Donation-dApp",
   },
   {

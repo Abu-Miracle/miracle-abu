@@ -251,7 +251,18 @@ export default function Work() {
           <p className="text-[var(--text-light)] text-sm mb-4">
             Open to new opportunities and exciting projects
           </p>
-          <button className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer">
+          <button
+          onClick={() => {
+              const subject = encodeURIComponent("Portfolio Hire Request");
+              const body = encodeURIComponent(
+                "Hello, I would like to discuss hiring opportunities.",
+              );
+              window.open(
+                `https://mail.google.com/mail/?view=cm&fs=1&to=miracleabu07@gmail.com&su=${subject}&body=${body}`,
+                "_blank",
+              );
+            }}
+          className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer">
             Let's Connect
           </button>
         </motion.div>

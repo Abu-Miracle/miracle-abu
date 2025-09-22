@@ -28,13 +28,13 @@ export default function NavBar() {
 
   return (
     <motion.div
-      className="w-full flex md:justify-center justify-between mb-3 bg-[var(--dark-gray)] md:bg-transparent border-2 md:border-none border-[var(--light-gray)] rounded-full pl-1 md:pl-0 pr-5 md:pr-0"
+      className="sticky top-10 w-full flex md:justify-center justify-between mb-3 bg-white/[0.07] backdrop-blur-lg md:backdrop-blur-none md:bg-transparent border-2 md:border-none border-[var(--light-gray)] rounded-full pl-1 md:pl-0 pr-5 md:pr-0 z-30 "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
       <div className="flex items-center justify-center">
-        <div className="md:bg-[var(--dark-gray)] md:border-2 border-[var(--light-gray)] rounded-full flex justify-center items-center w-16 h-16 ">
+        <div className="md:bg-white/[0.07] bg-transparent md:backdrop-blur-lg md:border-2 border-[var(--light-gray)] rounded-full flex justify-center items-center w-16 h-16 ">
           <Image
             src="/logo.svg"
             width={40}
@@ -48,7 +48,7 @@ export default function NavBar() {
         </span>
       </div>
 
-      <div className="bg-[#1B1B1B] border-[var(--light-gray)] hidden md:flex justify-between items-center border-2 w-full rounded-full px-14">
+      <div className="bg-white/[0.07] border-[var(--light-gray)] hidden md:flex justify-between items-center border-2 w-full rounded-full px-14 backdrop-blur-sm">
         {navLinks.map((item, index) => {
           const href =
             item === "ABOUT"
