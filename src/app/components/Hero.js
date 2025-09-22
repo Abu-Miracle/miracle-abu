@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <h1 className="text-white text-3xl font-bold mt-10">I'm MIracle Abu</h1>
+        <h1 className="text-white text-3xl font-bold mt-10">I am Miracle Abu</h1>
         <p className="mt-4 mb-5 text-[14px]/6">
           I build responsive, user-friendly websites and web applications using
           modern technologies like React and Next.js. I focus on creating
@@ -84,7 +84,7 @@ export default function Hero() {
               Hire Me
             </span>
             <span className="rounded-r-md bg-[var(--dark-orange)] ml-[1px] h-full w-8 flex items-center justify-center inset-shadow-sm inset-shadow-black/60 group-hover:bg-[var(--darker-orange)] transition-colors duration-300">
-              <img src="/plus.svg" alt="plus" className="w-6 h-6" />
+              <img src="/plus.svg" alt="plus" className="w-6 h-6"/>
             </span>
           </button>
 

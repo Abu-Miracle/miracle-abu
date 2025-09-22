@@ -264,7 +264,7 @@ export default function Work() {
             }}
             className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer"
           >
-            Let's Connect
+            Let&apos;s Connect
           </button>
         </motion.div>
       </div>
