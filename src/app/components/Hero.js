@@ -42,14 +42,21 @@ export default function Hero() {
         <h1 className="text-[var(--text-light)]">Frontend Developer</h1>
 
         <motion.div
-          className="bg-gray-600 flex border-4 border-[var(--light-gray)] lg:hidden space-y-6  w-56 h-56 rounded-full mt-12"
           animate={{ x: [0, -10, 0], y: [0, 10, 0] }}
           transition={{
             duration: 2,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-        ></motion.div>
+          className="flex lg:hidden items-center justify-center rounded-full w-[226px] h-[226px] p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-50% to-[var(--dark-orange)] mt-12"
+        >
+         <div 
+            className="bg-bottom bg-cover w-full h-full rounded-full"
+            style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')` }}
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-b from-black/5 from-55% to-[var(--dark-orange)]/50"></div>
+          </div>
+        </motion.div>
 
         <h1 className="text-white text-3xl font-bold mt-10">I'm MIracle Abu</h1>
         <p className="mt-4 mb-5 text-[14px]/6">
@@ -117,6 +124,7 @@ export default function Hero() {
           <div className="bg-[var(--orange)] w-2 h-2 rounded-full mr-2 animate-pulse"></div>
           AVAILABLE FOR JOB
         </div>
+
         <motion.div
           animate={{ x: [0, -10, 0], y: [0, 10, 0] }}
           transition={{
@@ -124,8 +132,15 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="bg-gray-600 hidden border-4 border-[var(--light-gray)] lg:flex  w-56 h-56 rounded-full mt-10"
-        ></motion.div>
+          className="flex items-center justify-center rounded-full w-[226px] h-[226px] p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-50% to-[var(--dark-orange)] mt-10"
+        >
+          <div 
+            className="bg-bottom bg-cover w-full h-full rounded-full"
+            style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')` }}
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-b from-black/5 from-55% to-[var(--dark-orange)]/50"></div>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );

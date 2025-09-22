@@ -44,7 +44,7 @@ export default function ProjectDetailClient({ project }) {
               </div>
             )}
 
-            <div className="p-8">
+            <div className="px-4 py-8 md:px-8">
               <div className="mb-6">
                 <h1 className="text-3xl font-bold text-white mb-2">
                   {project.title}

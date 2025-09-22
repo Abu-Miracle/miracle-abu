@@ -252,7 +252,7 @@ export default function Work() {
             Open to new opportunities and exciting projects
           </p>
           <button
-          onClick={() => {
+            onClick={() => {
               const subject = encodeURIComponent("Portfolio Hire Request");
               const body = encodeURIComponent(
                 "Hello, I would like to discuss hiring opportunities.",
@@ -262,7 +262,8 @@ export default function Work() {
                 "_blank",
               );
             }}
-          className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer">
+            className="bg-[var(--dark-orange)] hover:bg-[var(--orange)]/80 text-white px-4 py-2 rounded-lg text-sm transition-colors cursor-pointer"
+          >
             Let's Connect
           </button>
         </motion.div>
