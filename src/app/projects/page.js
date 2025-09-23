@@ -6,7 +6,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { useRef } from "react";
 import { useInView } from "motion/react";
-import { div } from "motion/react-client";
 
 export default function Projects() {
   const ref = useRef(null);

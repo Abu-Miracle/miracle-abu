@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 import { motion } from "motion/react";
-import { div } from "motion/react-m";
 
 export default function Hero() {
   const [isCopied, setIsCopied] = useState(false);
@@ -50,15 +49,19 @@ export default function Hero() {
           }}
           className="flex lg:hidden items-center justify-center rounded-full w-[226px] h-[226px] p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-50% to-[var(--dark-orange)] mt-12"
         >
-         <div 
+          <div
             className="bg-bottom bg-cover w-full h-full rounded-full"
-            style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')` }}
+            style={{
+              backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')`,
+            }}
           >
             <div className="w-full h-full rounded-full bg-gradient-to-b from-black/5 from-55% to-[var(--dark-orange)]/50"></div>
           </div>
         </motion.div>
 
-        <h1 className="text-white text-3xl font-bold mt-10">I am Miracle Abu</h1>
+        <h1 className="text-white text-3xl font-bold mt-10">
+          I am Miracle Abu
+        </h1>
         <p className="mt-4 mb-5 text-[14px]/6">
           I build responsive, user-friendly websites and web applications using
           modern technologies like React and Next.js. I focus on creating
@@ -84,7 +87,7 @@ export default function Hero() {
               Hire Me
             </span>
             <span className="rounded-r-md bg-[var(--dark-orange)] ml-[1px] h-full w-8 flex items-center justify-center inset-shadow-sm inset-shadow-black/60 group-hover:bg-[var(--darker-orange)] transition-colors duration-300">
-              <img src="/plus.svg" alt="plus" className="w-6 h-6"/>
+              <img src="/plus.svg" alt="plus" className="w-6 h-6" />
             </span>
           </button>
 
@@ -134,9 +137,11 @@ export default function Hero() {
           }}
           className="flex items-center justify-center rounded-full w-[226px] h-[226px] p-[2px] bg-gradient-to-b from-[var(--light-gray)] from-50% to-[var(--dark-orange)] mt-10"
         >
-          <div 
+          <div
             className="bg-bottom bg-cover w-full h-full rounded-full"
-            style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')` }}
+            style={{
+              backgroundImage: `url('${process.env.NEXT_PUBLIC_IMAGE_LINK}')`,
+            }}
           >
             <div className="w-full h-full rounded-full bg-gradient-to-b from-black/5 from-55% to-[var(--dark-orange)]/50"></div>
           </div>

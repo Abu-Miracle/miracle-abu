@@ -9,7 +9,6 @@ import { useInView } from "motion/react";
 
 export default function KhemsafeInternshipDetails({ experience }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   const skillsRef = useRef(null);
   const trainingRef = useRef(null);

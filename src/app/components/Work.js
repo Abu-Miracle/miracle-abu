@@ -9,9 +9,6 @@ import { useRef } from "react";
 import { useInView } from "motion/react";
 
 export default function Work() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   const projectsRef = useRef(null);
   const experiencesRef = useRef(null);
   const stackRef = useRef(null);

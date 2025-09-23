@@ -21,7 +21,7 @@ export const metadata = {
     siteName: "Miracle Abu Portfolio",
     images: [
       {
-        url: "/portfolio_thumbnail.png", 
+        url: "/portfolio_thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Miracle Abu Portfolio",
