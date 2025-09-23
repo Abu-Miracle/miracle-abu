@@ -35,7 +35,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="px-10 lg:px-20 my-16">
+    <div className="px-5 md:px-10 lg:px-20 my-10 md:my-16">
       <NavBar />
       <div className="min-h-screen text-white py-6">
         <div className="max-w-4xl mx-auto">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   },
                 },
               }}
-              className="space-y-8"
+              className="space-y-8 px-2"
             >
               <div>
                 <h2 className="text-2xl font-semibold mb-6">
@@ -113,7 +113,7 @@ export default function ContactPage() {
                       href="https://www.linkedin.com/in/miracle-abu-2018412b1/"
                       className="hover:text-white "
                     >
-                      MIracle Abu
+                      Miracle Abu
                     </Link>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                   },
                 },
               }}
-              className="border-2 border-[var(--light-gray)] rounded-lg p-8"
+              className="border-2 border-[var(--light-gray)] rounded-lg p-6 md:p-8"
             >
               <h1 className="text-2xl font-semibold pb-4">Send a message</h1>
               <form className="space-y-6">
