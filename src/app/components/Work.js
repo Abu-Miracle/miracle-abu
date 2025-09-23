@@ -114,7 +114,7 @@ export default function Work() {
             <Link
               key={index}
               href={`/experiences/${item.slug}`}
-              className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-3 rounded-[14px] cursor-pointer transition-colors duration-300 hover:bg-[var(--light-gray)]"
+              className="w-full flex flex-col md:flex-row mb-5 md:mb-7 p-3 rounded-[14px] cursor-pointer transition-colors duration-300 bg-[var(--light-gray)] md:bg-[var(--dark-gray)] hover:bg-[var(--light-gray)]"
             >
               <div className="w-full h-32 md:w-36 md:h-32 mb-3 md:mb-0 md:mr-3">
                 <img

@@ -15,7 +15,7 @@ export default function Footer() {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-      className="bg-linear-to-l from-[var(--light-gray)] from-95% to-[var(--dark-orange)] p-[2px] rounded-[14px] h-[66px] lex justify-center items-center mt-3"
+      className="bg-linear-to-l from-[var(--light-gray)] from-95% to-[var(--dark-orange)] p-[2px] rounded-[14px] h-[66px] flex justify-center items-center mt-3"
     >
       <div className="bg-linear-to-l w-full rounded-xl h-full from-[var(--dark-gray)] from-60% to-[#33130E] justify-between flex items-center md:px-6 px-4">
         <div className="flex text-[var(--text-light)]">Portfolio 2025</div>

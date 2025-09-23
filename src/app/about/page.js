@@ -7,7 +7,6 @@ export default function About() {
     <div className="">
       <Hero />
       <Work />
-      <Footer />
     </div>
   );
 }
