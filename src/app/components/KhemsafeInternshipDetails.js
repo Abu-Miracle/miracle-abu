@@ -293,7 +293,7 @@ export default function KhemsafeInternshipDetails({ experience }) {
           <div className="bg-[var(--light-gray)] rounded-xl p-6 text-center">
             <div className="bg-green-500 w-3 h-3 rounded-full mb-4 animate-pulse mx-auto"></div>
             <h3 className="text-white font-semibold mb-2">
-              SIWES Program Completed Successfully
+              Program Completed Successfully
             </h3>
             <p className="text-[var(--text-light)] text-sm">
               Foundation established for advanced web development and design
